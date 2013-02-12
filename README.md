@@ -13,7 +13,7 @@ Usage and Example:
 After loading the mts-arrows.tec in your preable, writing:
 
  <pre>$q_0 \may{a} q_1 \must{a} q_2 \mayw{a} q_3 \mustw{a} q_4$</pre>
- <pre>$q_0 \lmay{abcd} q_1 \lmust{abcd} q_2 \lmayw{abcd} q_3 \lmustw{abcd} q_4$</pre>
+ <pre>$q_0 \lmay{abcd} q_1 \lmust{abcde} q_2 \lmayw{abcdef} q_3 \lmustw{abcdefg} q_4$</pre>
 
 in your document will result in:
 
