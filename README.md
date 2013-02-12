@@ -1,6 +1,6 @@
-MTS-LaTeX-Arcs
+MTS-LaTeX-Arrows
 ==============
-This is a set of LaTeX math symbols, for writing transition arcs in modal transition systems.
+This is a set of LaTeX math symbols, for writing transition arrows of modal transition systems in a LaTex document.
 
 Requirements
 ============
