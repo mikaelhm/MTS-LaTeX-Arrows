@@ -11,10 +11,10 @@ The arrows are drawn in TikZ, and the arrow tip is a \guilsinglright which is no
 
 Usage:
 ======
-  * May arc: <pre>$q \may{a} q'$v
-  * Must arc: <pre>$q \must{a} q'$</pre>
-  * Weak may arc: <pre>$q \mayw{a} q'$</pre>
-  * Weak must arc: <pre>$q \mustw{a} q'$</pre>
+  * May transition: <pre>$q \may{a} q'$v
+  * Must transition: <pre>$q \must{a} q'$</pre>
+  * Weak may transition: <pre>$q \mayw{a} q'$</pre>
+  * Weak must transition: <pre>$q \mustw{a} q'$</pre>
 
 Example:
 ========
