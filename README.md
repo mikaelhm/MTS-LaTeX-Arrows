@@ -24,5 +24,5 @@ After loading the mts-arcs.tec in your preable, writing:
 
 in your document will result in:
 
-![Example](https://raw.github.com/mikaelhm/MTS-LaTeX-Arcs/master/example.png)
+![Example](https://raw.github.com/mikaelhm/MTS-LaTeX-Arrows/master/example.png)
 
