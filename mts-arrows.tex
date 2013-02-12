@@ -1,10 +1,24 @@
 %%% Modal transition systems arcs 
 %%% by Mikael H. Møller - mikael@i-dyllen.dk
 
+
 %%% required packages:
 \RequirePackage[T1]{fontenc}
 \RequirePackage{tikz} 
 
+%%% Arrow Commands
+\newcommand{\may}[1]{\stackrel{#1}{\mayarrow}}
+\newcommand{\must}[1]{\stackrel{#1}{\mustarrow}}
+\newcommand{\mayw}[1]{\stackrel{#1}{\weakmayarrow}}
+\newcommand{\mustw}[1]{\stackrel{#1}{\weakmustarrow}}
+
+\newcommand{\lmay}[1]{\stackmay{#1}{\mayfill}}
+\newcommand{\lmust}[1]{\stackmust{#1}{\mustfill}}
+\newcommand{\lmayw}[1]{\stackmay{#1}{\maywfill}}
+\newcommand{\lmustw}[1]{\stackmust{#1}{\mustwfill}}
+
+
+%%% Arrow drawings (normal arrows)
 \newcommand{\mayarrow}{\mathrel{
 \begin{tikzpicture}[line width=.4, scale=0.13,line cap=round]
 %set symbolarea:
@@ -17,8 +31,6 @@
 \node at (3.5,0) {\upshape{\guilsinglright}};
 \end{tikzpicture}
 }}
-\newcommand{\may}[1]{\stackrel{#1}{\mayarrow}}
-
 
 \newcommand{\mustarrow}{\mathrel{
 \begin{tikzpicture}[line width=.4, scale=0.13,line cap=round]
@@ -30,8 +42,6 @@
 \node at (3.5,0) {\upshape{\guilsinglright}};
 \end{tikzpicture}
 }}
-\newcommand{\must}[1]{\stackrel{#1}{\mustarrow}}
-
 
 \newcommand{\weakmayarrow}{\mathrel{
 \begin{tikzpicture}[line width=.4, scale=0.13,line cap=round]
@@ -49,8 +59,6 @@
 \node at (3.5,0) {\upshape{\guilsinglright}};
 \end{tikzpicture}
 }}
-\newcommand{\mayw}[1]{\stackrel{#1}{\weakmayarrow}}
-
 
 \newcommand{\weakmustarrow}{\mathrel{
 \begin{tikzpicture}[line width=.4, scale=0.13,line cap=round]
@@ -64,4 +72,49 @@
 \node at (3.5,0) {\upshape{\guilsinglright}};
 \end{tikzpicture}
 }}
-\newcommand{\mustw}[1]{\stackrel{#1}{\weakmustarrow}}
+
+%%% Arrow drawings (long arrows)
+%
+% Here only the line of the arrow is drawn, and then repeated using \xleaders
+\newcommand{\arrowend}{\mathrel{
+\begin{tikzpicture}[baseline=-0.559ex, line width=.4, scale=0.13,line cap=round]
+%set symbolarea:
+\clip (-.06,-.7) rectangle (1.06,.7);
+%draw dashed line:
+\draw (0,0) -- (1,0);
+\end{tikzpicture}
+}}
+
+\newcommand{\weakarrowend}{\mathrel{
+\begin{tikzpicture}[baseline=-0.559ex, line width=.4, scale=0.13,line cap=round]
+%set symbolarea:
+\clip (-.06,-.7) rectangle (1.06,.7);
+%draw upper dashed line:
+\draw (0,.2) -- (1,.2);
+%draw lower dashed line:
+\draw (0,-.2) -- (1,-.2);
+\end{tikzpicture}
+}}
+
+%% Long arrows (repeating the line segnemt)
+\newcommand{\mayfill}{$
+\xleaders\hbox{\hspace{0.2ex}$\arrowend$}
+\hfill\text{\hspace{-.74ex}\upshape{\guilsinglright}}$} 
+
+\newcommand{\mustfill}{$
+\xleaders\hbox{\hspace{-0.4ex}$\arrowend$}
+\hfill\text{\hspace{-.74ex}\upshape{\guilsinglright}}$} 
+
+\newcommand{\maywfill}{$
+\xleaders\hbox{\hspace{0.2ex}$\weakarrowend$}
+\hfill\text{\hspace{-.54ex}\upshape{\guilsinglright}}$} 
+
+\newcommand{\mustwfill}{$
+\xleaders\hbox{\hspace{-0.4ex}$\weakarrowend$}
+\hfill\text{\hspace{-.54ex}\upshape{\guilsinglright}}$} 
+
+%% adjusting text on long arrows
+\newcommand{\stackmay}[2]{\stackrel{\hspace{0.8ex}#1\hspace{1ex}}{\hbox{#2}}}
+\newcommand{\stackmust}[2]{\stackrel{\hspace{0ex}#1\hspace{1ex}}{\hbox{#2}}}
+
+
