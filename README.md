@@ -8,23 +8,7 @@ The arrows are drawn in TikZ, and the arrow tip is a \guilsinglright which is no
   * <pre>\RequirePackage{tikz}</pre>
   * <pre>\RequirePackage[T1]{fontenc}</pre>
 
-
-Usage:
-------
-
-  * May arrow: <pre>$q \may{a} q'$v
-  * Must arrow: <pre>$q \must{a} q'$</pre>
-  * Weak may arrow: <pre>$q \mayw{a} q'$</pre>
-  * Weak must arrow: <pre>$q \mustw{a} q'$</pre>
-
-  * Long may arrow: <pre>$q \lmay{abcd} q'$v
-  * Long must arrow: <pre>$q \lmust{abcd} q'$</pre>
-  * Long weak may arrow: <pre>$q \lmayw{abcd} q'$</pre>
-  * Long weak must arrow: <pre>$q \lmustw{abcd} q'$</pre>
-
-*Note: long arrows should only be used with long action names on top*
-
-Example:
+Usage and Example:
 --------
 After loading the mts-arrows.tec in your preable, writing:
 
@@ -35,3 +19,4 @@ in your document will result in:
 
 ![Example](https://raw.github.com/mikaelhm/MTS-LaTeX-Arrows/master/example.png)
 
+*Note: long arrows should only be used with long action names on top*
