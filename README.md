@@ -1,6 +1,6 @@
 MTS-LaTeX-Arcs
 ==============
-This is a set of LaTeX math symbols, for writing transition arcs in modal transition systems.
+This is a set of LaTeX math symbols, for writing transition arrows of modal transition systems in a LaTex document.
 
 Requirements
 ------------
@@ -12,15 +12,15 @@ The arrows are drawn in TikZ, and the arrow tip is a \guilsinglright which is no
 Usage:
 ------
 
-  * May arc: <pre>$q \may{a} q'$v
-  * Must arc: <pre>$q \must{a} q'$</pre>
-  * Weak may arc: <pre>$q \mayw{a} q'$</pre>
-  * Weak must arc: <pre>$q \mustw{a} q'$</pre>
+  * May arrow: <pre>$q \may{a} q'$v
+  * Must arrow: <pre>$q \must{a} q'$</pre>
+  * Weak may arrow: <pre>$q \mayw{a} q'$</pre>
+  * Weak must arrow: <pre>$q \mustw{a} q'$</pre>
 
-  * Long may arc: <pre>$q \lmay{abcd} q'$v
-  * Long must arc: <pre>$q \lmust{abcd} q'$</pre>
-  * Long weak may arc: <pre>$q \lmayw{abcd} q'$</pre>
-  * Long weak must arc: <pre>$q \lmustw{abcd} q'$</pre>
+  * Long may arrow: <pre>$q \lmay{abcd} q'$v
+  * Long must arrow: <pre>$q \lmust{abcd} q'$</pre>
+  * Long weak may arrow: <pre>$q \lmayw{abcd} q'$</pre>
+  * Long weak must arrow: <pre>$q \lmustw{abcd} q'$</pre>
 
 *Note: long arrows should only be used with long action names on top*
 
